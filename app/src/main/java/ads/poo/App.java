@@ -1,19 +1,28 @@
 package ads.poo;
 
-import java.sql.SQLOutput;
-
 public class App {
     public static void main(String[] args) {
         Caneta bic = new Caneta();
 
-        System.out.println(bic.isAberta());
+        //Define a cor
+        bic.definirCor("Preto");
 
+        //Coloca o nivel de tinta em 100
+        bic.definirNivelTinta(100);
+
+        //Fala qual a cor da caneta
+        System.out.println(bic.obterCor());
+
+        //abre a caneta
         bic.abrirFechar();
 
-        System.out.println(bic.isAberta());
+        //desenha e adiciona a quantidade de _
+        System.out.println(bic.desenhar(1));
+        System.out.println(bic.desenhar(6));
+        System.out.println(bic.desenhar(5));
 
-        bic.definirCor("vermelho");
+        //mostra o nível de tinta
+        System.out.println(bic.obterNivelTinta());
 
-        System.out.println(bic.isCor());
     }
 }
